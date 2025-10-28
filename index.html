@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G-Skincare</title>
+
+  <!-- CSS Links -->
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <link rel="stylesheet" href="responsive.css"> 
+  <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="header navbar fixed-top navbar-expand-lg px-md-3">
+    <div class="container-fluid">
+      <a class="navbar-brand fs-1 fw-medium" href="#"><i>G-Skincare</i></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-end w-75" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+  ​​​      ​<div class="offcanvas-header">
+           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+          <div class="navbar-title mx-auto text-center">
+            <h1>G<i class="bi bi-gem fs-1 fw-medium align-content-center"></i>F</h1>
+            <div class="menu d-flex justify-content-center flex-wrap gap-5 mt-2 mt-lg-0 fs-3">
+              <a href="#new">NEW</a>
+              <a href="#makeup">MAKEUP</a>
+              <a href="#skin_care">SKIN CARE</a>
+              <a href="#hair_color">HAIR COLOR</a>
+              <a href="#styling">HAIR CARE & STYLING</a>
+              <a href="#tools">VIRTUAL BEAUTY TOOLS</a>
+              <a href="#beauty">BEAUTY MAGAZINE</a>
+              <a href="#explore">EXPLORE</a>
+            </div>
+          </div>
+
+          <div class="position-relative d-flex gap-4 m-5" id="icon-container">
+            <div class=" position-relative">
+              <i style="cursor: pointer;" class="bi bi-briefcase fs-1"  data-bs-target="#offcanvasScrolling" data-bs-toggle="offcanvas"></i>
+              <div id="cart-count" class="active-cart  top-50 start-100 translate-middle badge rounded-pill bg-danger fs-6">0</div>
+            </div>
+             <a href="#Map-message"><i class="bi bi-geo-alt fs-1"></i></a>
+             <a href=""><i class="bi bi-person fs-1"></i></a>
+             <i class="bi bi-search fs-1" id="search" style="cursor:pointer;"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <div id="carouselslide" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselslide" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#carouselslide" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselslide" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#carouselslide" data-bs-slide-to="3"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <!-- Slide 0 -->
+      <div class="carousel-item active" data-bs-interval="4000">
+        <img src="./img/loreal.jpg" class="d-block w-100 s-img" alt="">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="fs-1">The L'Oreal Paris</h5>
+          <p class="fs-2">We can all agree that the look of naturally glowing skin...</p>
+        </div>
+      </div>
+
+      <!-- Slide 1 -->
+      <div class="carousel-item" data-bs-interval="4000">
+        <img src="./img/makeup.jpg" class="d-block w-100 s-img" alt="">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="fs-1">The Care</h5>
+          <p class="fs-2">Discover our best eye creams formulated specifically...</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item" data-bs-interval="4000">
+        <img src="./img/mup.jpg" class="d-block w-100 s-img" alt="">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="fs-1 text-white">Makeup with you</h5>
+          <p class="fs-2 text-white">You can volumize and lengthen your lashes with our collection...</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item" data-bs-interval="4000">
+        <img src="./img/skincare.jpg" class="d-block w-100 s-img" alt="">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="fs-1">Luxury Korean Skincare</h5>
+          <p class="fs-2">Top 10 Luxury Korean Skincare Brands That Are Essential...</p>
+        </div>
+      </div>
+    </div>
+  </div>    
+  <!--Product-->
+  <section class="product" id="new"> 
+    <div id="Menu" class="container-fluid my-3 text-center"> 
+      <h2 style="background-color: rgba(0, 255, 255, 0.46); font-size: 30px;" class="mb-4 fw-bold​​">The G-Skincare</h2> 
+      <div id="product-show" class="row justify-content-center g-4"> 
+        <!-- Product 1 --> 
+
+      </div> <!-- end row --> 
+    </div> 
+  </section>
+<!--Customer review-->
+<section class="container-fluid py-5">
+  <h2 class="text-center fw-bold mb-5" style="font-size: 30px; background-color: rgba(144, 136, 189, 0.46); padding: 0.5rem;">Customers Review</h2>
+
+  <div class="reviews-container d-flex flex-wrap justify-content-center gap-3 mx-5">
+
+    <!-- Customer 1 -->
+    <div class="review-card card shadow p-3">
+      <div class="text-center text-danger mb-2 fs-2">
+        <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+      </div>
+      <p class="fs-3 mb-3">Biore UV Aqua Rich Watery Essence (Cream) is a popular choice for its non-chemical scent, lack of eye-burning, non-oily feel, and silky finish...</p>
+      <div class="d-flex align-items-center mt-2">
+        <img src="./img/customer1.png" class="rounded-circle me-2" style="width:60px;height:60px;">
+        <div>
+          <h3 class="mb-0">Ms. Gan Licena</h3>
+          <p class="fs-4">So cool</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer 2 -->
+    <div class="review-card card shadow p-3">
+      <div class="text-center text-danger mb-2 fs-2">
+        ​​​​<i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+      </div>
+      <p class="fs-3 mb-3">Products like Banila Co Clean It Zero Cleansing Balm are celebrated for effectively removing all makeup...</p>
+      <div class="d-flex align-items-center mt-2">
+        <img src="./img/customer2.jpg" class="rounded-circle me-2" style="width:60px;height:60px;">
+        <div>
+          <h3 class="mb-0">Ms. Gan Licena</h3>
+          <p class="fs-4">Wow very good</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer 3 -->
+    <div class="review-card card shadow p-3">
+      <div class="text-center text-danger mb-2 fs-2">
+        <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+      </div>
+      <p class="fs-3 mb-3">While some users find that a simple cleanser and moisturizer are insufficient and need targeted actives...</p>
+      <div class="d-flex align-items-center mt-2">
+        <img src="./img/customer3.jpg" class="rounded-circle me-2" style="width:60px;height:60px;">
+        <div>
+          <h3 class="mb-0">Ms. Gan Licena</h3>
+          <p class="fs-4">Beautiful</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer 4 -->
+    <div class="review-card card shadow p-3">
+      <div class="text-center text-danger mb-2 fs-2">
+        <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+      </div>
+      <p class="fs-3 mb-3">There is a growing appreciation for personalized skincare solutions because they lead to fewer side effects...</p>
+      <div class="d-flex align-items-center mt-2">
+        <img src="./img/customer4.png" class="rounded-circle me-2" style="width:60px;height:60px;">
+        <div>
+          <h3 class="mb-0">Ms. Mam Pina</h3>
+          <p class="fs-4">Good</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!--Choose Us-->
+<main class="container-fluid  mx-1 my-1">
+  <div class="card-header d-flex gap-3">
+      <img class="h-70 w-50 mx-5 my-5 shadow-lg" src="https://www.getrael.com/cdn/shop/articles/December_Blog_Banners_Benefits_of_Organic_Skin_Care_Products.png?v=1641404707" alt="">
+    <div style="margin-top: 30vh;">
+      <h1 style="font-size: 60px;">Why Choose Us</h1>
+      <p class="fs-2">At G-Skincare, we believe that healthy skin begins with the power of nature. Our products <br> are carefully made from gentle, natural ingredients that nourish, protect, and rejuvenate <br> your skin without harsh chemicals. We’re passionate about creating formulas that are safe for all skin <br> types and kind to the environment. With G-Skincare, you can feel confident knowing you’re giving your  <br>skin the pure care it deserves — naturally beautiful, inside and out.</p>
+    </div>
+  </div>
+  <div id="Map-message" class="card-header d-flex gap-1 mx-5">
+    
+    <div class="responsive-contact shadow-lg rounded mx-auto my-4 p-3">
+      <form class="bg-body-tertiary p-4 rounded">
+        <h2 class="text-center mb-4 fw-bold fs-2">Message</h2>
+
+        <input type="text" placeholder="Name" class="form-control mb-3 bg-body-secondary fs-2" style="height: 45px;">
+        <input type="email" placeholder="Email" class="form-control mb-3 bg-body-secondary fs-2" style="height: 45px;">
+        <input type="text" placeholder="Country" class="form-control mb-3 bg-body-secondary fs-2" style="height: 45px;">
+        <textarea placeholder="Message" class="form-control mb-3 bg-body-secondary fs-2" rows="5"></textarea>
+
+        <div class="text-center">
+          <input type="submit" value="Send Message" class="btn btn-dark px-4 w-50 w-sm-100 fs-1">
+        </div>
+      </form>
+    </div>
+​​​​​​​​    ​<div class="map shadow-lg">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d72454.1249863538!2d2.2665679236972323!3d48.85845726881826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2skh!4v1760271608154!5m2!1sen!2skh" width="800" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</main>
+
+<!-- App Download -->
+<div  class="container my-5">
+  <h2 class="text-center mb-3 fw-bold">Download App With</h2>
+  <p class="text-center fs-3 text-muted mb-4">
+    Get your favorite coffee delivered faster, earn rewards, and enjoy exclusive offers by downloading our mobile app.
+  </p>
+
+  <div class="d-flex flex-wrap justify-content-center gap-3">
+    <!-- Google Play -->
+    <a href="#" target="_blank">
+      <img src="https://freelogopng.com/images/all_img/1664287128google-play-store-logo-png.png" 
+           alt="Google Play" class="store-btn">
+    </a>
+
+    <!-- App Store -->
+    <a href="#" target="_blank">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt2AB63zv7sETfbkjYyM2ZmTT6eVYF1eGP1Q&s" 
+           alt="App Store" class="store-btn">
+    </a>
+  </div>
+</div>
+<!--end-->
+<footer class="bg-dark text-light pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- Logo & Description -->
+      <div class=" col-md-4 mb-4 fs-2">
+        <h2 class="fw-bold">G-Skincare</h2>
+        <p>Premium skincare products made with natural ingredients. Nourish your skin and feel confident every day.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class=" col-md-4 mb-4">
+        <h5 class="fw-bold mb-3 fs-3">Quick Links</h5>
+        <ul class="list-unstyled fs-2">
+          <li><a href="#new" class="text-light text-decoration-none">New</a></li>
+          <li><a href="#makeup" class="text-light text-decoration-none">Makeup</a></li>
+          <li><a href="#skin_care" class="text-light text-decoration-none">Skin Care</a></li>
+          <li><a href="#hair_color" class="text-light text-decoration-none">Hair Color</a></li>
+          <li><a href="#tools" class="text-light text-decoration-none">Beauty Tools</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact & Social -->
+      <div class="col-md-4 mb-4 fs-2">
+        <h5 class="fw-bold mb-3 fs-3">Contact Us</h5>
+        <p>Email: sunflower@g-skincare.com</p>
+        <p>Phone: +855 12 345 678</p>
+        <div class="d-flex gap-2 mt-2 ">
+          <a href="#" class="text-light fs-2"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-light fs-2"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-light fs-2"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-light fs-2"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="bg-light">
+
+    <!-- Payment Methods -->
+    <div class="text-center mt-4">
+      <h5 class="fw-bold mb-3 fs-3">We Accept</h5>
+      <div class="d-flex justify-content-center align-items-center gap-3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa" style="height:50px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard" style="height:50px;">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5rhhK6J-1NLGEwAM6-EI4f5qc3tZtWgBhbheq_VqryrmVx9S70Dvf712If6G_i61lDtYq_KXJSfLu-EKL_z6jGGhIHm3JIXYemRRJRJKaXY_R-1_nIIwpeoaYX4gkZSih5WTks84WJpxR/w1200-h630-p-k-no-nu/iBanking-AbaBank1.jpg" alt="Discover" style="height:50px;">
+    </div>
+
+    <div class="text-center mt-3">
+      <p class="mb-0">&copy; 2025 G-Skincare. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<!-- Offcanvas Cart Payments -->
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false"
+  tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title fw-bold" id="offcanvasScrollingLabel">
+      <i class="bi bi-cart4"></i> Add Your Cart
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+
+  <div  class="offcanvas-body d-flex flex-column justify-content-between">
+
+    <!-- Cart Items -->
+    <div id="cart-item" class="cart-items">
+      
+      
+    </div>
+
+  </div>
+</div>
+
+</body>
+<script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+<script src="./js/data.js"></script>
+</html>
